@@ -7,12 +7,10 @@ function setup()  {
 
 function draw() {
   background('#16ab59') //overwrite bckgd w/each draw to have single circle
-  words.forEach(w => {
-    w.draw()
-  }) 
+  words.forEach(w => w.draw()) 
 }
 
-function mouseClicked() {
+function mouseDragged() {
   let w = new Word(mouseX, mouseY, 50)
   words.push(w)
 }
